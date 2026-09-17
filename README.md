@@ -51,7 +51,7 @@ The theme running through all three is model scepticism. Every project reports w
 
 ---
 
-### Project 4: SmartShop Online Purchase Intent Classifier
+## Project 4: SmartShop Online Purchase Intent Classifier
 
 - **Problem Type:** Binary classification
 - **Algorithm Used:** Decision Tree Classifier with scikit-learn Pipeline
