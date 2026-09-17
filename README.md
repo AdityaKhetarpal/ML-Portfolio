@@ -51,6 +51,21 @@ The theme running through all three is model scepticism. Every project reports w
 
 ---
 
+Project 4: SmartShop Online Purchase Intent Classifier
+
+- **Problem Type:** Binary classification
+- **Algorithm Used:** Decision Tree Classifier with scikit-learn Pipeline
+- **Tools Used:** Python (pandas, scikit-learn, NumPy)
+- **Dataset:** 12,330 online shopping sessions, 17 behavioural and technical features
+
+### Core Insights Summary:
+
+- **Class Imbalance Handled at the Model Level:** Only 15.5% of sessions end in a purchase (382 buyers vs 2,084 non-buyers). Rather than resampling the data, the pipeline uses `class_weight="balanced"` inside the Decision Tree, which adjusts the split criterion to weight minority-class errors more heavily. This lifted recall on the buyer class to 83% — the model catches 8 in 10 actual purchasers.
+- **Recall Over Precision as the Business-Correct Choice:** The tuned model achieves 83% recall at 50% precision on the buyer class. In a retargeting context that trade-off is correct — a false alarm costs an ad impression, a miss costs a lost sale. The project frames model selection around this asymmetry rather than reporting headline accuracy (85%), which a "nobody buys" baseline would nearly match.
+- **GridSearchCV Showed a Shallower Tree Generalises Better:** The baseline was trained at `max_depth=6`. A 5-fold cross-validated grid search across depths [4, 6, 8] and minimum leaf sizes [20, 30, 50] found the best cross-validated F1 at `max_depth=4, min_samples_leaf=50` — a counter-intuitive result that documents the overfitting risk of deep trees on a small minority class and justifies the conservative final configuration.
+
+---
+
 ## Results at a Glance
 
 | Project | Task | Best Model | Headline Metric |
@@ -58,6 +73,31 @@ The theme running through all three is model scepticism. Every project reports w
 | HomeVista Valuation | Regression | Linear Regression | R² 0.374 · MAE $30,830 |
 | TalentCore Attrition | Binary classification | L1 / Lasso | Accuracy 87.0% · Recall 0.83 |
 | Iris Benchmark | Multi-class classification | Logistic Regression | Held-out accuracy 94.7% |
+| SmartShop Intent | Binary classification | Decision Tree (tuned) | Recall 0.83 · F1 0.63 |
+
+---
+
+## Repository Structure
+
+```
+ML-Portfolio/
+├── 01-house-price-regression/
+│   ├── README.md                     # full write-up
+│   ├── house_price_predictor.py      # runnable pipeline
+│   ├── notebooks/                    # original exploratory notebook
+│   ├── data/                         # dataset (see data/README.md)
+│   └── outputs/                      # metrics, coefficients, plots
+├── 02-employee-turnover-classification/
+│   └── ... same layout
+├── 03-iris-species-classification/
+│   └── ... same layout (dataset included — runs out of the box)
+├── 04-smartshop-purchase-intent/
+│   └── ... same layout
+├── requirements.txt
+└── README.md
+```
+
+---
 
 ## Contact
 
