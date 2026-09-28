@@ -27,7 +27,6 @@ Welcome to my machine learning showcase. Below are five complete supervised lear
 - **Algorithms Used:** Linear Regression, with a standardised-feature control arm
 - **Tools Used:** Python (pandas, scikit-learn, NumPy, Matplotlib)
 - **Dataset:** 2,919 residential property records, 12 predictors
-- **Directory:** [`02-house-price-regression/`](./02-house-price-regression)
 
 ### Core Insights Summary:
 
@@ -43,7 +42,6 @@ Welcome to my machine learning showcase. Below are five complete supervised lear
 - **Algorithms Used:** Logistic Regression — baseline vs L1 (Lasso) vs L2 (Ridge)
 - **Tools Used:** Python (pandas, scikit-learn, NumPy, Matplotlib)
 - **Dataset:** 900 employee records, 15 features including 2 engineered terms
-- **Directory:** [`03-employee-turnover-classification/`](./03-employee-turnover-classification)
 
 ### Core Insights Summary:
 
@@ -59,7 +57,6 @@ Welcome to my machine learning showcase. Below are five complete supervised lear
 - **Algorithms Used:** K-Nearest Neighbours (k=5), Logistic Regression, Gaussian Naive Bayes
 - **Tools Used:** Python (pandas, scikit-learn, NumPy, Matplotlib)
 - **Dataset:** 150 specimens, 4 morphological measurements, perfectly balanced
-- **Directory:** [`04-iris-species-classification/`](./04-iris-species-classification)
 
 ### Core Insights Summary:
 
