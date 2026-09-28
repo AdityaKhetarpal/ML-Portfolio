@@ -12,8 +12,6 @@ Welcome to my machine learning showcase. Below are five complete supervised lear
 - **Algorithms Used:** Logistic Regression (balanced) vs LightGBM (300 trees, validation-tuned)
 - **Tools Used:** Python (pandas, scikit-learn, LightGBM, SHAP, Streamlit)
 - **Dataset:** 101,766 clinical encounters · 71,518 patients · 130 US hospitals (1999–2008)
-- **Live Demo:** [Streamlit App](Add URL here)
-- **Directory:** [`01-hospital-readmission/`](./01-hospital-readmission)
 
 ### Core Insights Summary:
 
