@@ -1,9 +1,5 @@
 # Supervised-ML-Portfolio
 
-Five end-to-end supervised machine learning projects in Python and scikit-learn
-
-## Applied Supervised Learning Portfolio
-
 Welcome to my machine learning showcase. Below are five complete supervised learning projects covering **regression**, **binary classification**, and **multi-class classification**. Each project ships a runnable script, the original exploratory notebook, diagnostic plots, and a written account of what the model can and cannot be trusted to do.
 
 The theme running through all five is model scepticism. Every project reports where its own results fall short — because a portfolio where every model scores 99% is a portfolio nobody stress-tested.
